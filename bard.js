@@ -632,7 +632,7 @@
      */
     function verifyNoOutstandingHttpRequests () {
         afterEach(angular.mock.inject(function($httpBackend) {
-            $httpBackend.verifyNoOutstandingExpectation();
+            $httpBackend.verifyNoOutstandingExpectation(false);
             $httpBackend.verifyNoOutstandingRequest();
         }));
     }
